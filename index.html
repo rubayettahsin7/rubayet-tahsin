@@ -1,199 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rubayet Tahsin</title>
-  <style>
-    /* Loader animation */
-    #loader {
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: #0d1117;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rubayet Tahsin | Portfolio</title>
 
-    .spinner {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #1da1f2;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
+<style>
+/* Loader */
+#loader {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: #0d1117;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #1da1f2;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { 0% {transform: rotate(0deg);} 100% {transform: rotate(360deg);} }
 
-    /* General styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0d1117;
-      color: #fff;
-    }
+/* Body & General */
+body { font-family: Arial, sans-serif; margin:0; background:#0d1117; color:#fff; }
+header { text-align:center; padding:50px 20px; background:#111827; }
+header img { width:150px; height:150px; border-radius:50%; border:4px solid #1da1f2; object-fit:cover; margin-bottom:20px; }
+header h1 { margin:0; font-size:2.5rem; color:#1da1f2; }
+header p { color:#ccc; font-size:1.2rem; }
 
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      background: #111827;
-    }
+/* Sections */
+section { max-width:900px; margin:50px auto; padding:20px; }
+h2 { text-align:center; color:#1da1f2; margin-bottom:30px; font-size:2rem; }
+#about p { font-size:1.1rem; line-height:1.6; text-align:center; color:#ccc; }
 
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #1da1f2;
-      margin-bottom: 20px;
-    }
+/* Skills */
+#skills { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.skill {
+  background:#111827; padding:15px 25px; border-radius:10px; color:#1da1f2; font-weight:bold;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+.skill:hover { transform: scale(1.1); background:#1da1f2; color:#0d1117; cursor:pointer; }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #1da1f2;
-    }
+/* Contact & Social Icons */
+#contact p { font-size:1.2rem; text-align:center; margin:10px 0; }
+#contact a { color:#1da1f2; text-decoration:none; font-weight:bold; margin:0 10px; }
+#contact a:hover { color:#ff4757; }
 
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
+.social-icons { text-align:center; margin-top:20px; }
+.icon-btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:55px; height:55px; margin:0 10px;
+  border-radius:50%; font-size:22px; color:#fff; text-decoration:none;
+  transition: all 0.3s ease;
+}
+.icon-btn:hover { transform: scale(1.2); box-shadow:0 0 15px #1da1f2; cursor:pointer; }
 
-    section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-    }
+/* Different colors */
+.fb { background:#3b5998; }
+.ig { background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af); }
+.tt { background:#000; }
+.yt { background:#ff0000; }
+.wa { background:#25d366; }
+.mail { background:#ef4444; }
 
-    h2 {
-      text-align: center;
-      color: #1da1f2;
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
+.fb:hover { background:#2d4373; }
+.ig:hover { background:#c13584; }
+.tt:hover { background:#333; }
+.yt:hover { background:#cc0000; }
+.wa:hover { background:#1ebc57; }
+.mail:hover { background:#dc2626; }
 
-    /* About section */
-    #about p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: center;
-      color: #ccc;
-    }
-
-    /* Skills section */
-    #skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .skill {
-      background: #111827;
-      padding: 15px 25px;
-      border-radius: 10px;
-      color: #1da1f2;
-      font-weight: bold;
-      transition: transform 0.3s;
-    }
-
-    .skill:hover {
-      transform: scale(1.1);
-      background: #1da1f2;
-      color: #0d1117;
-      cursor: pointer;
-    }
-
-    /* Contact section */
-    #contact p {
-      font-size: 1.2rem;
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    #contact a {
-      color: #1da1f2;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 10px;
-    }
-
-    #contact a:hover {
-      color: #ff4757;
-    }
-
-    .social-icons {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .social-icons a {
-      display: inline-block;
-      margin: 0 10px;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-  </style>
+/* Footer */
+footer { text-align:center; padding:20px; color:#64748b; border-top:1px solid #1f2937; font-size:14px; }
+</style>
 </head>
 <body>
 
-  <!-- Loader -->
-  <div id="loader">
-    <div class="spinner"></div>
+<!-- Loader -->
+<div id="loader"><div class="spinner"></div></div>
+
+<!-- Header -->
+<header>
+  <img src="profile.jpg" alt="Rubayet Tahsin">
+  <h1>Rubayet Tahsin</h1>
+  <p>Professional Web Developer & Digital Creator</p>
+</header>
+
+<!-- About -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I am Rubayet Tahsin. I love creating professional and modern websites. I am passionate about web development and digital creativity. My goal is to provide clean, responsive, and professional websites.</p>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skill">HTML</div>
+  <div class="skill">CSS</div>
+  <div class="skill">JavaScript</div>
+  <div class="skill">React</div>
+  <div class="skill">Git & GitHub</div>
+  <div class="skill">Web Design</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:rubayettahsin7@gmail.com">rubayettahsin7@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/01613859061" target="_blank">01613859061</a></p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/RubayetTahsin" target="_blank" class="icon-btn fb"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/rubayet.tahsin12" target="_blank" class="icon-btn ig"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@rubayettahsin12" target="_blank" class="icon-btn tt"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://www.youtube.com/@RubayetTahsin" target="_blank" class="icon-btn yt"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://wa.me/01613859061" target="_blank" class="icon-btn wa"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="mailto:rubayettahsin7@gmail.com" class="icon-btn mail"><i class="fa-solid fa-envelope"></i></a>
   </div>
+</section>
 
-  <!-- Header -->
-  <header>
-    <img src="profile.jpg" alt="Rubayet Tahsin">
-    <h1>Rubayet Tahsin</h1>
-    <p>Professional Web Developer & Digital Creator</p>
-  </header>
+<footer>
+  © 2026 Rubayet Tahsin • All Rights Reserved
+</footer>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I am Rubayet Tahsin. I love creating professional and modern websites. I am passionate about web development and digital creativity. My goal is to provide clean, professional, and responsive websites for everyone.</p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill">HTML</div>
-    <div class="skill">CSS</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">React</div>
-    <div class="skill">Git & GitHub</div>
-    <div class="skill">Web Design</div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:rubayettahsin7@gmail.com">rubayettahsin7@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/01613859061" target="_blank">01613859061</a></p>
-    
-    <div class="social-icons">
-      <a href="https://www.facebook.com/RubayetTahsin" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/rubayet.tahsin12" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@rubayettahsin12" target="_blank">TikTok</a>
-      <a href="https://www.youtube.com/@RubayetTahsin" target="_blank">YouTube</a>
-    </div>
-  </section>
-
-  <script>
-    // Loader hide after page load
-    window.addEventListener("load", function() {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
+<script>
+// Hide loader after page load
+window.addEventListener("load", function() {
+  document.getElementById("loader").style.display = "none";
+});
+</script>
 
 </body>
 </html>
