@@ -1,120 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rubayet Tahsin | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Rubayet Tahsin | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    *{box-sizing:border-box;}
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
 
-    body{
-      margin:0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background:#0f172a;
-      color:#e2e8f0;
-    }
+body{
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:#0f172a;
+  color:#e2e8f0;
+}
 
-    header{
-      text-align:center;
-      padding:70px 20px;
-      background:#111827;
-      border-bottom:1px solid #1f2937;
-    }
+header{
+  text-align:center;
+  padding:70px 20px;
+  background:#111827;
+  border-bottom:1px solid #1f2937;
+}
 
-    header img{
-      width:150px;
-      height:150px;
-      border-radius:50%;
-      border:4px solid #3b82f6;
-      object-fit:cover;
-      margin-bottom:15px;
-    }
+header img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  border:4px solid #3b82f6;
+  object-fit:cover;
+  margin-bottom:15px;
+}
 
-    header h1{
-      margin:10px 0 5px;
-      font-size:34px;
-      font-weight:600;
-    }
+header h1{
+  font-size:34px;
+  margin-bottom:5px;
+}
 
-    header p{
-      color:#94a3b8;
-      font-size:16px;
-    }
+header p{
+  color:#94a3b8;
+}
 
-    section{
-      max-width:900px;
-      margin:40px auto;
-      padding:0 20px;
-    }
+section{
+  max-width:900px;
+  margin:40px auto;
+  padding:0 20px;
+}
 
-    .card{
-      background:#111827;
-      padding:30px;
-      border-radius:16px;
-      margin-bottom:25px;
-      border:1px solid #1f2937;
-      transition:.3s;
-    }
+.card{
+  background:#111827;
+  padding:30px;
+  border-radius:16px;
+  margin-bottom:25px;
+  border:1px solid #1f2937;
+  transition:.3s;
+}
 
-    .card:hover{
-      transform:translateY(-5px);
-      border-color:#3b82f6;
-    }
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#3b82f6;
+}
 
-    .card h2{
-      margin-top:0;
-      color:#3b82f6;
-      margin-bottom:15px;
-    }
+.card h2{
+  color:#3b82f6;
+  margin-bottom:15px;
+}
 
-    /* Round Social Icons */
-    .social-icons{
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-      margin-top:20px;
-    }
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
 
-    .social-icons a{
-      width:55px;
-      height:55px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:22px;
-      color:white;
-      text-decoration:none;
-      transition:.3s;
-    }
+.social-icons a{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:white;
+  text-decoration:none;
+  transition:.3s;
+}
 
-    .social-icons a:hover{
-      transform:scale(1.15);
-      box-shadow:0 0 15px #3b82f6;
-    }
+.social-icons a:hover{
+  transform:scale(1.15);
+  box-shadow:0 0 15px #3b82f6;
+}
 
-    .fb{background:#1877f2;}
-    .ig{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
-    .tt{background:#000;}
-    .yt{background:#ff0000;}
-    .wa{background:#25d366;}
-    .mail{background:#ef4444;}
+.fb{background:#1877f2;}
+.ig{background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af);}
+.tt{background:#000;}
+.yt{background:#ff0000;}
+.wa{background:#25d366;}
+.mail{background:#ef4444;}
 
-    footer{
-      text-align:center;
-      padding:20px;
-      color:#64748b;
-      font-size:14px;
-      border-top:1px solid #1f2937;
-    }
-  </style>
+footer{
+  text-align:center;
+  padding:20px;
+  color:#64748b;
+  border-top:1px solid #1f2937;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<header
+<header>
+  <img src="profile.jpg" alt="Rubayet Tahsin">
+  <h1>Rubayet Tahsin</h1>
+  <p>Student | Aspiring Web Developer</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      My name is Rubayet Tahsin. I am a motivated student from Bangladesh with a strong interest in web development and modern technology.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Social Media</h2>
+    <div class="social-icons">
+      <a class="fb" href="https://facebook.com/Rubayet%20Tahsin" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a class="ig" href="https://instagram.com/rubayet.tahsin12" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a class="tt" href="https://tiktok.com/@rubayettahsin12" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+      <a class="yt" href="https://www.youtube.com/@RubayetTahsin" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Rubayet Tahsin • All Rights Reserved
+</footer>
+
+</body>
+</html>
