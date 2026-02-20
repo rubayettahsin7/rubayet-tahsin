@@ -120,4 +120,80 @@
     }
 
     #contact a {
-      color
+      color: #1da1f2;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    #contact a:hover {
+      color: #ff4757;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img src="profile.jpg" alt="Rubayet Tahsin">
+    <h1>Rubayet Tahsin</h1>
+    <p>Professional Web Developer & Digital Creator</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am Rubayet Tahsin. I love creating professional and modern websites. I am passionate about web development and digital creativity. My goal is to provide clean, professional, and responsive websites for everyone.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">React</div>
+    <div class="skill">Git & GitHub</div>
+    <div class="skill">Web Design</div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:rubayettahsin7@gmail.com">rubayettahsin7@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/01613859061" target="_blank">01613859061</a></p>
+    
+    <div class="social-icons">
+      <a href="https://www.facebook.com/RubayetTahsin" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/rubayet.tahsin12" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@rubayettahsin12" target="_blank">TikTok</a>
+      <a href="https://www.youtube.com/@RubayetTahsin" target="_blank">YouTube</a>
+    </div>
+  </section>
+
+  <script>
+    // Loader hide after page load
+    window.addEventListener("load", function() {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
